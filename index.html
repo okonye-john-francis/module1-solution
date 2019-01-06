@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="Module1">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<title>Module1 Solution</title>
+	</head>
+	<body>
+		<b>Instructions</b><br>
+		Enter a comma separated list of items you have for lunch for example; Rice,Beans,Cassava etc and then click "Check If Too Much" button to see a lunch comment message.<br>
+		If the items are less than or equal to 3, the message will be "Enjoy!". if the items are more than 3, the messahe will be "Too much!". If no items are entered, the message will be "Please enter data first".
+		<div ng-controller="Module1Controller">
+			<b>Note:</b> empty item, i.e.,, or , , is not considered as an element
+			<br><br>
+			<input type="text" ng-model="lunch_items">
+			<br><br>
+			<input type="button" value="Check If Too Much" ng-click="displayLunchMessage();">
+			<br><br>
+			<div style="color: red;">
+				{{lunch_message}}
+			</div>
+		</div>
+	</body>
+</html>
